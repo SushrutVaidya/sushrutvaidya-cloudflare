@@ -541,11 +541,13 @@ export function Loglens() {
             <div className="col-span-4 lg:col-span-5">
               <SectionLabel>Get started</SectionLabel>
               <h2 id="ll-install" className="t-display mt-4">
-                Clone, build, pipe.
+                One line. No JVM.
               </h2>
               <p className="t-sub mt-6">
-                It builds to a single jar with Maven, or a native binary via the GraalVM profile.
-                Then it lives on your box, where the fastest tool during an incident always is.
+                Prebuilt native binaries for macOS, Linux, and Windows — GraalVM-compiled, so
+                there is no Java runtime to install. The installer detects your OS and CPU, grabs
+                the matching binary, and drops it on your PATH. Then it lives on your box, where
+                the fastest tool during an incident always is.
               </p>
             </div>
 
@@ -553,25 +555,33 @@ export function Loglens() {
               <Terminal
                 title="install.sh"
                 action={
-                  <CopyButton text={'git clone https://github.com/SushrutVaidya/loglens\ncd loglens && mvn -q package\nkubectl logs -f api | java -jar target/loglens.jar --stats'} />
+                  <CopyButton text={'curl -fsSL https://raw.githubusercontent.com/SushrutVaidya/loglens/main/install.sh | sh\nkubectl logs -f api | loglens --stats'} />
                 }
               >
                 <div className="space-y-1">
                   <div>
-                    <span style={{ color: HUE('green') }}>$</span> git clone github.com/SushrutVaidya/loglens
+                    <span style={{ color: HUE('green') }}>$</span> curl -fsSL
+                    raw.githubusercontent.com/SushrutVaidya/loglens/main/install.sh | sh
                   </div>
-                  <div>
-                    <span style={{ color: HUE('green') }}>$</span> cd loglens &amp;&amp; mvn -q package
-                  </div>
-                  <div className="opacity-60">  building loglens.jar ...</div>
+                  <div className="opacity-60">  loglens: downloading loglens-macos-arm64 (latest)</div>
+                  <div className="opacity-60">  loglens: installed to /usr/local/bin/loglens</div>
                   <div className="pt-2">
-                    <span style={{ color: HUE('green') }}>$</span> kubectl logs -f api | java -jar
-                    target/loglens.jar --stats
+                    <span style={{ color: HUE('green') }}>$</span> kubectl logs -f api | loglens --stats
                   </div>
                 </div>
               </Terminal>
               <p className="t-label mt-4">
-                Tip: alias loglens=&apos;java -jar /path/to/loglens.jar&apos; and forget the jar exists.
+                Windows or prefer to click? Grab a binary from the{' '}
+                <a
+                  href={`${REPO}/releases/latest`}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="rule-in font-semibold"
+                  style={{ color: HUE('green') }}
+                >
+                  releases page <span aria-hidden="true">↗</span>
+                </a>
+                . Or build it yourself — <code>mvn package</code> for the jar, the GraalVM profile for a native binary.
               </p>
             </div>
           </Grid>

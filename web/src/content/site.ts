@@ -22,7 +22,6 @@ export const links = {
   github: 'https://github.com/SushrutVaidya',
   linkedin: 'https://linkedin.com/in/Sushrutsvaidya',
   steam: 'https://steamcommunity.com/profiles/76561199065609624',
-  devquest: '/devquest/',
   // The rickroll. Kept deliberately — the counter behind it is a real
   // Redis-backed endpoint, which is the joke.
   youtube: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
@@ -71,12 +70,6 @@ export const elsewhere: readonly Destination[] = [
     href: links.steam,
     note: 'the honest version',
     external: true,
-  },
-  {
-    label: 'DevQuest',
-    href: links.devquest,
-    note: 'the five-stage game, on this domain',
-    external: false,
   },
   {
     label: 'Résumé',

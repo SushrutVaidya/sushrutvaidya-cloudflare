@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:pages": "tsc -b && vite build && cp -R ../img ../assets dist/ && rm -f dist/img/study.gif",
     "lint": "oxlint",
     "preview": "vite preview"
   },

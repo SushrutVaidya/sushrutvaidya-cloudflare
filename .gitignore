@@ -17,6 +17,10 @@ sprite-buffer/
 /skills-lock.json
 /tests/shots/
 /web/dist/
+/web/.wrangler/
+/web/.dev.vars
+/web/.env
+/web/.env.*
 /AWSCLIV2.pkg
 /venv/
 /reference-architecture-examples/

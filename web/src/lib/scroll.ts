@@ -43,6 +43,11 @@ export function unlockScroll(): void {
 export function scrollToId(id: string): void {
   const target = document.getElementById(id)
   if (!target) return
-  if (lenis) lenis.scrollTo(target, { offset: 0 })
+  // force: true — scroll even while Lenis is .stop()'d. The nav overlay stops
+  // Lenis on open and only restarts it in a cleanup that runs *after* the
+  // setOpen(false) re-render — which is after this call. Without force, the
+  // first chapter click scrolls into a stopped Lenis and is swallowed, so the
+  // user has to click a second time. force makes the single click land.
+  if (lenis) lenis.scrollTo(target, { offset: 0, force: true })
   else target.scrollIntoView({ behavior: 'auto', block: 'start' })
 }

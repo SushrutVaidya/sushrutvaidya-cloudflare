@@ -1,0 +1,13 @@
+# Cloudflare Pages redirects.
+#
+# The apex's /loglens (and /loglens/) point at the dedicated subdomain so there
+# is a single canonical product URL — same 301 the old nginx reverse proxy did.
+/loglens        https://loglens.sushrutvaidya.in/   301
+/loglens/       https://loglens.sushrutvaidya.in/   301
+
+# SPA fallback: unmatched paths serve the app shell so client-side routes
+# (/work/loglens, /about, …) resolve on hard refresh. Real files (/static/*,
+# /img/*, /audio/*, /loglens.html, robots.txt, …) are served before this.
+# The loglens.* host is handled earlier by functions/_middleware.ts, which
+# serves loglens.html for navigations there.
+/*              /index.html                         200
