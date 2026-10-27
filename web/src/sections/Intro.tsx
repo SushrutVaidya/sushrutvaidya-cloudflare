@@ -2,7 +2,7 @@ import { motion, useReducedMotion } from 'motion/react'
 import { Bleed, Frame, Grid } from '@/components/layout/Frame'
 import { DagScene } from '@/components/DagScene'
 import { TechChips } from '@/components/TechChips'
-import { experience, profile } from '@/content/site'
+import { profile } from '@/content/site'
 import { DUR, EASE, STAGGER_STEP } from '@/lib/motion'
 
 /** Marathi, Telugu, Kannada, carried over from the original site. */
@@ -31,8 +31,8 @@ export function Intro({ ready }: { ready: boolean }) {
       <Grid className="items-center">
         {/* Left: the identity. */}
         <div className="col-span-4 lg:col-span-7">
-          {/* A pill chip: available-for-work status, the kind of loud-but-useful
-              badge the playful register invites (and it is true). */}
+          {/* A pill chip: a location readout, the kind of loud-but-useful
+              badge the playful register invites. */}
           <motion.div
             className="mb-8 inline-flex items-center gap-2.5 rounded-full border-2 border-line-strong bg-paper-raised px-4 py-1.5"
             initial={reduceMotion ? undefined : { opacity: 0, scale: 0.9 }}
@@ -45,7 +45,7 @@ export function Intro({ ready }: { ready: boolean }) {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green opacity-75" />
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green" />
             </span>
-            <span className="t-label text-ink">Open to platform &amp; backend roles</span>
+            <span className="t-label text-ink">Hyderabad, IN</span>
           </motion.div>
 
           {/* Greetings, one quiet line. Only the first is announced. */}
@@ -104,10 +104,8 @@ export function Intro({ ready }: { ready: boolean }) {
             transition={{ duration: DUR.smooth, ease: EASE, delay: reduceMotion ? 0 : 0.8 }}
           >
             <p className="t-sub text-ink">
-              {profile.role} at{' '}
-              <span className="font-display font-bold text-ink">{experience[0].company}</span>, via{' '}
-              {experience[0].via}. I keep thousands of Airflow DAGs on schedule for ten-plus
-              engineering teams.
+              {profile.role}. I like backends, platform engineering, automation, open source, and
+              side projects that occasionally get out of hand.
             </p>
           </motion.div>
         </div>

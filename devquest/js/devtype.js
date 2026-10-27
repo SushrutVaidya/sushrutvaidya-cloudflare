@@ -175,10 +175,10 @@ const EASY_TEXTS = [
     "If", "you", "made", "it", "this", "far,", "you're", "probably", "a", "developer", "—", "or", "very,", "very", "lost.",
     "Either", "way,", "welcome", "to", "my", "portfolio.",
   ],
-  // V2 — Work story
+  // V2 — Build story
   [
-    "I", "currently", "work", "at", "Apple", "AdPlatforms", "via", "Quest", "Global.",
-    "Every", "day", "I", "orchestrate", "thousands", "of", "DAGs", "across", "10+", "engineering", "teams.",
+    "I", "write", "software", "from", "Hyderabad,", "mostly", "backends", "and", "pipelines.",
+    "I", "have", "kept", "thousands", "of", "DAGs", "on", "schedule", "across", "10+", "engineering", "teams.",
     "I", "once", "reduced", "deployment", "failures", "by", "90%", "on", "a", "Tuesday", "afternoon.",
     "My", "tools:", "Java,", "Airflow,", "Kubernetes,", "and", "excessive", "logging.",
     "I'm", "AWS", "and", "OCI", "certified,", "which", "means", "two", "more", "things", "to", "brag", "about.",

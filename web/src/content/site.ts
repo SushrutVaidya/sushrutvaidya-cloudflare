@@ -9,11 +9,10 @@
 
 export const profile = {
   name: 'Sushrut Vaidya',
-  role: 'Platform Engineer',
+  role: 'Software Engineer',
   location: 'Hyderabad, IN',
-  // Verbatim from the previous site's meta description.
   tagline:
-    'Platform Engineer at Apple AdPlatforms. Java, Spring Boot, Docker, Kubernetes, AWS.',
+    'Software engineer. Backends, platform engineering, automation, open source, and side projects. Java, Spring Boot, Docker, Kubernetes, AWS.',
   email: 'sushrutsv@outlook.com',
   resume: '/assets/resume.pdf',
 } as const
@@ -114,13 +113,12 @@ export const metrics = [
 
 export const experience = [
   {
-    company: 'Apple AdPlatforms',
-    via: 'Quest Global',
-    role: 'Platform Engineer',
-    // TODO: add start date — not recorded anywhere in the repos.
-    period: 'Current',
+    role: 'Software Engineer',
+    focus: 'Backend & platform engineering',
+    base: 'Hyderabad, IN',
+    mode: 'Side projects & open source',
     summary:
-      'Orchestrate thousands of Airflow DAGs supporting 10+ engineering teams. Cut deployment failures by 90% and pipeline execution time by 60% through automation and internal tooling.',
+      'I kept thousands of Airflow DAGs on schedule for ten-plus engineering teams, and cut deployment failures by 90% and pipeline execution time by 60% with automation and internal tooling.',
     stack: ['Java', 'Spring Boot', 'Apache Airflow', 'Kubernetes', 'Docker', 'Jenkins'],
   },
 ] as const

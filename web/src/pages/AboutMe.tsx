@@ -41,7 +41,7 @@ export function AboutMe() {
   useEffect(() => {
     document.title = 'Sushrut Vaidya · off the clock'
     return () => {
-      document.title = 'Sushrut Vaidya · Platform Engineer'
+      document.title = 'Sushrut Vaidya · Software Engineer'
     }
   }, [])
 

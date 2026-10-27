@@ -24,10 +24,10 @@ export function Practice() {
         {/* Manifest: the role as a spec card. */}
         <dl className={`${col.rail} card-pop h-fit bg-paper-raised p-5`}>
           {[
-            ['Company', role.company],
-            ['Via', role.via],
             ['Role', role.role],
-            ['Period', role.period],
+            ['Focus', role.focus],
+            ['Base', role.base],
+            ['Mode', role.mode],
           ].map(([key, value], i, arr) => (
             <div
               key={key}

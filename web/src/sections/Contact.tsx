@@ -47,8 +47,7 @@ export function Contact() {
 
           <Reveal delay={0.08}>
             <p className="t-sub mt-10 max-w-lg">
-              Open to platform and backend roles. Happiest arguing about whether the thing
-              needed Kubernetes.
+              Backend is home turf. Happiest arguing about whether the thing needed Kubernetes.
             </p>
           </Reveal>
         </div>
